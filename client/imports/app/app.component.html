@@ -1,11 +1,3 @@
 <div>
-  <parties-form></parties-form>
-  <ul>
-    <li *ngFor="let party of parties | async">
-      {{party.name}}
-      <p>{{party.description}}</p>
-      <p>{{party.location}}</p>
-      <button (click)="removeParty(party)">X</button>
-    </li>
-  </ul>
+  <router-outlet></router-outlet>
 </div>
