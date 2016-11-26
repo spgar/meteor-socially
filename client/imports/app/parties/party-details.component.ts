@@ -35,4 +35,14 @@ export class PartyDetailsComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.paramsSub.unsubscribe();
   }
+
+  saveParty() {
+    Parties.update(this.party._id, {
+      $set: {
+        name: this.party.name,
+        description: this.party.description,
+        location: this.party.location
+      }
+    });
+  }
 }
